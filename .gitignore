@@ -1,0 +1,7 @@
+# Ignore all
+/*
+
+# Do not ignore that
+!.gitignore
+!CMakeLists.txt
+!sources/

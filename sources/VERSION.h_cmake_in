@@ -1,0 +1,10 @@
+#ifndef VERSION_CMAKE
+#define VERSION_CMAKE
+
+#cmakedefine TESTT
+
+const size_t coroutine_VERSION_MAJOR = @coroutine_VERSION_MAJOR@;
+const size_t coroutine_VERSION_MINOR = @coroutine_VERSION_MINOR@;
+const size_t coroutine_VERSION_PATCH = @coroutine_VERSION_PATCH@;
+
+#endif // VERSION_CMAKE
