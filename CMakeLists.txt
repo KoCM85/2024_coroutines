@@ -4,7 +4,7 @@ project(proj_coroutine LANGUAGES CXX)
 
 set(coroutine_VERSION_MAJOR 1)
 set(coroutine_VERSION_MINOR 2)
-set(coroutine_VERSION_PATCH 2)
+set(coroutine_VERSION_PATCH 3)
 
 set(PROJ_SOURCE_DIR ${CMAKE_SOURCE_DIR}/sources)
 set(PROJ_SOURCES ${PROJ_SOURCE_DIR}/main.cpp)
