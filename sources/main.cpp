@@ -48,8 +48,10 @@ int main() {
 	using namespace std::string_literals;
 
 	using namespace my;
-
-	std::cout << "v " << coroutine_VERSION_MAJOR << '.' << coroutine_VERSION_MINOR << '.' << coroutine_VERSION_PATCH << '\n';
+	
+	#ifdef PROJ_VERSION_PRINT
+		std::cout << "v " << coroutine_VERSION_MAJOR << '.' << coroutine_VERSION_MINOR << '.' << coroutine_VERSION_PATCH << '\n';
+	#endif
 
 	const std::string dashes("---------------");
 	size_t counter = 1;

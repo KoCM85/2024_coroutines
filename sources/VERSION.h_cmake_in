@@ -1,7 +1,7 @@
 #ifndef VERSION_CMAKE
 #define VERSION_CMAKE
 
-#cmakedefine TESTT
+#cmakedefine PROJ_VERSION_PRINT
 
 const size_t coroutine_VERSION_MAJOR = @coroutine_VERSION_MAJOR@;
 const size_t coroutine_VERSION_MINOR = @coroutine_VERSION_MINOR@;
