@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.28)
 
-project(proj_coroutine LANGUAGES CXX)
+project(proj_coroutine LANGUAGES CXX VERSION 1.1.4)
 
 set(coroutine_VERSION_MAJOR 1)
-set(coroutine_VERSION_MINOR 2)
-set(coroutine_VERSION_PATCH 3)
+set(coroutine_VERSION_MINOR 3)
+set(coroutine_VERSION_PATCH 0)
 
 set(PROJ_SOURCE_DIR ${CMAKE_SOURCE_DIR}/sources)
 set(PROJ_SOURCES ${PROJ_SOURCE_DIR}/main.cpp)
@@ -31,10 +31,8 @@ include_directories(${PROJ_BUILD_DIR})
 add_executable(coroutine ${PROJ_SOURCES})
 
 set_target_properties(coroutine PROPERTIES CXX_STANDARD 23 CXX_STANDARD_REQUIRED YES)
-
+set_target_properties(coroutine PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${PROJ_BINARY_DIR})
 set_target_properties(coroutine PROPERTIES OUTPUT_NAME "coroutine$<$<CONFIG:Debug>:_d>")
-
-add_custom_command(TARGET coroutine POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${PROJ_BUILD_DIR_CONFIG} ${PROJ_BINARY_DIR})
 
 if(PROJ_VERSION_PRINT)
 	message("Project version: ${coroutine_VERSION_MAJOR}.${coroutine_VERSION_MINOR}.${coroutine_VERSION_PATCH}")
